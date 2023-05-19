@@ -22,7 +22,6 @@ public class SpringSecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.GET,"/").permitAll()
                 .requestMatchers("/user/register").permitAll()
-                .requestMatchers("/categories/remove").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin();
