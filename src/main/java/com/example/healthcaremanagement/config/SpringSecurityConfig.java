@@ -10,10 +10,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.stereotype.Service;
-
 @Service
 public class SpringSecurityConfig {
-
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -38,5 +36,4 @@ public class SpringSecurityConfig {
         authenticationProvider.setPasswordEncoder(passwordEncoder);
         return authenticationProvider;
     }
-
 }
